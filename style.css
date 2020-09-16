@@ -1,0 +1,84 @@
+@import url("whitespace-reset.css");
+
+body {
+  background: linear-gradient(#D1DBBD, #FCFEF5);
+  box-sizing: border-box;
+  display: grid;
+  font-family: 'Roboto Condensed', sans-serif;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  margin: 0 auto;
+  width: 960px;
+}
+
+header {
+  display: grid;
+  grid-area: header;
+  grid-template-areas:
+    "logo title nav";
+  grid-template-columns: 120px 1fr 541px;
+}
+  header img {
+    grid-area: logo;
+    padding: 20px 0 20px 20px;
+  }
+  header h1 {
+    align-self: end;
+    color: #193441;
+    font-size: 36px;
+    font-weight: normal;
+    grid-area: title;
+    padding: 0 0 33px 15px;
+  }
+  header nav {
+    align-items: flex-end;
+    display: flex;
+    grid-area: nav;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+    header nav a {
+      background: #FCFEF5;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      color: #91AA9D;
+      font-size: 18px;
+      text-align: center;
+      text-decoration-line: none;
+      padding: 10px 40px 14px 40px;
+    }
+    header nav a.active {
+      background: #91AA9D;
+      color: #FCFEF5;
+    }
+
+main {
+  background: #FFFFFF;
+  box-shadow: 0 5px 5px #B5B5B5;
+  grid-area: main;
+  padding: 30px;
+}
+  main h2 {
+    color: #3E606F;
+    font-size: 32px;
+    font-weight: normal;
+    padding: 36px 0 25px 0;
+  }
+  main p {
+    color: #3E606F;
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+  main figure {
+    float: right;
+    padding: 0 0 20px 30px;
+  }
+
+footer {
+  color: #3E606F;
+  font-size: 14px;
+  grid-area: footer;
+  padding: 15px 0 35px 0;
+}
